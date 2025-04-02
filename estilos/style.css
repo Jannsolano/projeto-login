@@ -5,3 +5,39 @@
     verde: #49a09d
     Lilás: #5f2c82
 */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --cor1: #49a09d;
+    --cor2: #5f2c82;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+section#login {
+    border: 1px solid white;
+    width: 50vw;
+    margin: auto;
+    padding: 10px;
+    
+}
+
+
+
+div#imagem {
+    width: 10vw;
+}
+
+div#formulario{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
