@@ -16,28 +16,163 @@
 }
 
 body {
+    position: relative;
     height: 100vh;
-    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+    background-color: var(--cor2);
     font-family: Arial, Helvetica, sans-serif;
-
+    font-size: 1em;
 }
 
 section#login {
-    border: 1px solid white;
-    width: 50vw;
-    margin: auto;
+    position: absolute;
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
-    
 }
 
-
-
-div#imagem {
-    width: 10vw;
+#imagem {
+    width: 100%;
+    height: 200px;
+    background-image: url(../imagens/pexels-caique-araujo-101156227-15705995.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
 }
 
-div#formulario{
-    display: block;
+div#formulario {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+div#formulario > h1 {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+div#formulario > p {
+    margin-bottom: 15px;
+}
+
+form > p {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--cor2);
+    padding: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.campo{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+}
+
+.campo > span {
+    font-size: 1.5em;
+}
+
+form > p > input[type="text"],
+form > p > input[type="password"] {
+    background-color: #49a09d;
+    border: none;
+    border-radius: 10px;
+    outline: none;
     padding: 10px;
+    width: 100%;
+}
+
+form > p > input[type="text"]:hover,
+form > p > input[type="password"]:hover{
+    background-color: #2d6463;
+}
+
+form > p > input[type="text"]:focus,
+form > p > input[type="password"]:focus {
+    background-color: white;
+}
+
+input#inome {
+    color: black;
+    border: none;
+}
+
+input::placeholder{
+    color: black;
+
+}
+.entrar {
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.entrar:hover {
+    background-color: #2d6463;
+}
+
+form > p > a {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    margin: -4px;
+}
+
+form > p > a:hover {
+    background-color: var(--cor1);
+}
+
+.bsenha {
+    background-color: var(--cor1);
+}
+
+@media screen and (min-width: 768px) {
+    
+body {
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor1));
+}
+section#login{
+    flex-direction: row-reverse;
+    max-width: 900px;
+    height: auto;
+}   
+
+#imagem{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    border-radius: 0px;
+}
+
+#formulario{
+    min-width: 300px;
+}
 }
