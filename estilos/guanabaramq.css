@@ -7,7 +7,8 @@
     }
     
     section#login {
-        width: 90vw;
+        width: 80vw;
+        height: 310px;
     }    
 
     /* graças ao display=block, posso usar o float pra tirar o elemento do fluxo normal e posicionar ele o mais pra esquerda ou direita possível dentro do container pai */
@@ -40,6 +41,7 @@
     
     section#login {
         width: 950px;
+        height: 350px;
     }
 
     section#login > div#imagem {
@@ -58,6 +60,7 @@
     }
 
     div#formulario > p {
-        font-size: 1.2em;
+        font-size: 1em;
+        margin: 20px 0px;
     }
 }
