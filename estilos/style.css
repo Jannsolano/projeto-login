@@ -6,6 +6,7 @@
     Lilás: #5f2c82
 */
 * {
+    /*reset de estilo do navegador*/
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -13,34 +14,37 @@
 }
 
 :root{
+    /*declaração de variáveis para as cores padrão*/
     --cor1: #49a09d;
     --cor2: #5f2c82;
 }
 
 body {
-    position: relative;
+    /*definindo tela inteira como tamanho do site, sua cor, e tamanho da fonte*/
     height: 100vh;
     background-color: var(--cor2);
     font-size: 1em;
 }
+
 main {
-    position: relative;
     height: 100vh;
     width: 100vw;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 section#login {
-    position: absolute;
+    
+    
+
     min-width: 300px;
     max-width: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.661);
 
     transition: width 1s, height 1;
@@ -49,7 +53,6 @@ section#login {
 
 div {
     display: block;
-    flex-direction: column;
     padding: 10px;
 }
 
@@ -65,8 +68,7 @@ div {
 
 div#formulario {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     align-items: stretch;
 }
 
@@ -80,8 +82,6 @@ div#formulario > p {
 }
 
 form > p {
-    display: flex;
-    align-items: center;
     border-radius: 10px;
     background-color: var(--cor2);
     padding: 5px;
@@ -91,9 +91,6 @@ form > p {
 
 .campo{
     padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-width: 40px;
 }
 
@@ -111,17 +108,17 @@ form > p > input[type="password"] {
     width: 100%;
 }
 
-form > p > input[type="text"]:hover,
-form > p > input[type="password"]:hover{
+form > p > input[type="email"]:hover,
+form > p > input[type="password"]:hover {
     background-color: #2d6463;
 }
 
-form > p > input[type="text"]:focus,
+form > p > input[type="email"]:focus,
 form > p > input[type="password"]:focus {
     background-color: white;
 }
 
-input#inome {
+input#imail {
     color: black;
     border: none;
 }
@@ -170,9 +167,7 @@ body {
     background-image: linear-gradient(to bottom, var(--cor2), var(--cor1));
 }
 section#login{
-    flex-direction: row-reverse;
     max-width: 900px;
-    height: auto;
 }   
 
 #imagem{
