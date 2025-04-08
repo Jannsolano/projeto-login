@@ -31,6 +31,11 @@ main {
     width: 100vw;
 
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
@@ -40,8 +45,8 @@ section#login {
     
     
 
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 280px;
+    max-width: 400px;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
@@ -57,17 +62,16 @@ div {
 }
 
 #imagem {
-    width: 100%;
-    height: 200px;
+    display: block;
     background-image: url(../imagens/pexels-caique-araujo-101156227-15705995.jpg);
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10px 10px 0px 0px;
+    background-position: center bottom;
 }
 
 div#formulario {
-    padding: 20px;
+    padding: 10px;
     flex-flow: column nowrap;
     align-items: stretch;
 }
@@ -87,6 +91,8 @@ form > p {
     padding: 5px;
     margin-bottom: 5px;
     color: white;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .campo{
@@ -161,23 +167,64 @@ form > p > a:hover {
     background-color: var(--cor1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     
 body {
     background-image: linear-gradient(to bottom, var(--cor2), var(--cor1));
 }
+
 section#login{
-    max-width: 900px;
-}   
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    max-width: 600px;
+}
+
 
 #imagem{
-    width: 100%;
-    height: auto;
     background-size: cover;
-    border-radius: 0px;
+    min-width: 300px;
+    height: 378px;
 }
 
 #formulario{
-    min-width: 300px;
+    max-width: 300px;
 }
+
+}
+
+@media screen and (min-width:992px) {
+    
+    body {
+        background-image: linear-gradient(to bottom, var(--cor2), var(--cor1));
+    }
+
+    #imagem{
+        float: left;
+        background-size: cover;
+        width: 50%;
+        height: 373px;
+    }
+
+    section#login{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    max-width: 950px;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 50%;
+    }
+
+    div#formulario > h1 {
+        font-size: 2em;
+    }
+
+    div#formulario > p {
+        font-size: 1em;
+        margin: 20px 0px;
+    }
+
 }
